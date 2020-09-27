@@ -155,4 +155,9 @@
     "confidenceScore": 3,
     "expertiseScore": 2
   }
+]": "Complexity can be handled by providing users with easy-to-use tooling.",
+    "statedBy": "IBM, MediaAtHand, DigitalOcean",
+    "confidenceScore": 2.6666666666666665,
+    "expertiseScore": 1.6666666666666667
+  }
 ]

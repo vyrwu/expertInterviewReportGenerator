@@ -1,4 +1,5 @@
-const {normalScores, weighedScores, findings} = require('./data.js') 
+const {normalScores, weighedScores, findings} = require('./data.js')
+const {writeLatexTable} = require('./util')
 
 const fs = require('fs')
 
@@ -71,8 +72,6 @@ const generateScoredFindings = async (nameOfReport, findings, scores) => {
         return 0
     })
 
-    const printLatexTable = () => sortedFindingsBySumScore.forEach(sf => console.log(`${sf.finding} & ${sf.confidenceScore} & ${sf.expertiseScore} \\\\ \\hline`))
-
     await (async () => {
         const findingsBySumScore = findings.map(f => {
             const statedBy = f.statedBy.split(', ')
@@ -91,7 +90,18 @@ const generateScoredFindings = async (nameOfReport, findings, scores) => {
     
         const sortedFindingsBySumScore = sortBySumDescending(findingsBySumScore)
         
-        fs.writeFile(`./out/${nameOfReport}-sum.json`, JSON.stringify(sortedFindingsBySumScore, null, 2), () => console.log(`Report finished: ./out/${nameOfReport}-sum.json`))
+        const formattedFindings = {
+            json: {
+                data: JSON.stringify(sortedFindingsBySumScore, null, 2),
+                path: `./out/json/${nameOfReport}-sum.json`
+            },
+            latex: {
+                data: writeLatexTable(sortedFindingsBySumScore),
+                path: `./out/latex/${nameOfReport}-sum.tex`
+            }
+        }
+        fs.writeFile(formattedFindings.latex.path, formattedFindings.latex.data, () => console.log(`Report finished: ${formattedFindings.latex.path}`))
+        fs.writeFile(formattedFindings.json.path, formattedFindings.json.data,() => console.log(`Report finished: ${formattedFindings.json.path}`))
     })()
 
     await (async () => {
@@ -112,7 +122,18 @@ const generateScoredFindings = async (nameOfReport, findings, scores) => {
     
         const sortedFindingsByAverageScore = sortBySumDescending(findingsByAverageScore)
         
-        fs.writeFile(`./out/${nameOfReport}-avg.json`, JSON.stringify(sortedFindingsByAverageScore, null, 2), () => console.log(`Report finished: ./out/${nameOfReport}-avg.json`))    
+        const formattedFindings = {
+            json: {
+                data: JSON.stringify(sortedFindingsByAverageScore, null, 2),
+                path: `./out/json/${nameOfReport}-sum.json`
+            },
+            latex: {
+                data: writeLatexTable(sortedFindingsByAverageScore),
+                path: `./out/latex/${nameOfReport}-sum.tex`
+            }
+        }
+        fs.writeFile(formattedFindings.latex.path, formattedFindings.latex.data, () => console.log(`Report finished: ${formattedFindings.latex.path}`))
+        fs.writeFile(formattedFindings.json.path, formattedFindings.json.data,() => console.log(`Report finished: ${formattedFindings.json.path}`))
     })()
 }
 
@@ -121,33 +142,3 @@ const generateScoredFindings = async (nameOfReport, findings, scores) => {
     generateScoredFindings('normal', findings, normalScores)
     generateScoredFindings('weighed', findings, weighedScores)
 })()
-
-// const sortedFindingsByConfidence = findingsBySumScore.sort((a, b) => {
-//     const scoreSumA = a.confidenceScore
-//     const scoreSumB = b.confidenceScore
-
-//     if (scoreSumA < scoreSumB) {
-//         return 1
-//     }
-
-//     if (scoreSumA > scoreSumB) {
-//         return -1
-//     }
-
-//     return 0
-// })
-
-// const sortedFindingsByExpertise = findingsBySumScore.sort((a, b) => {
-//     const scoreSumA = a.expertiseScore
-//     const scoreSumB = b.expertiseScore
-
-//     if (scoreSumA < scoreSumB) {
-//         return 1
-//     }
-
-//     if (scoreSumA > scoreSumB) {
-//         return -1
-//     }
-
-//     return 0
-// })
