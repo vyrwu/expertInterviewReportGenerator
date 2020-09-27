@@ -1,0 +1,158 @@
+[
+  {
+    "finding": "Cloud providers' should be delivering simple tools and managed services.",
+    "statedBy": "IBM, DigitalOcean, ThoughtWorks, MediaAtHand, Google, Microsoft",
+    "confidenceScore": 19,
+    "expertiseScore": 16
+  },
+  {
+    "finding": "Cloud tools hide complexity from the user.",
+    "statedBy": "Tjek, ThoughtWorks, MediaAtHand, DigitalOcean, IBM",
+    "confidenceScore": 17,
+    "expertiseScore": 14
+  },
+  {
+    "finding": "Complexity can be handled by out-sourcing parts of the system to cloud.",
+    "statedBy": "Google, ThoughtWorks, MediaAtHand, DigitalOcean",
+    "confidenceScore": 15,
+    "expertiseScore": 13
+  },
+  {
+    "finding": "It is easier to operate in cloud vs. on-premise.",
+    "statedBy": "MediaAtHand, ThoughtWorks, Tjek, Microsoft",
+    "confidenceScore": 14,
+    "expertiseScore": 13
+  },
+  {
+    "finding": "Cloud is a good tool for prototyping.",
+    "statedBy": "MediaAtHand, ThoughtWorks, Tjek",
+    "confidenceScore": 12,
+    "expertiseScore": 11
+  },
+  {
+    "finding": "It is difficult to choose the right cloud tools and providers.",
+    "statedBy": "MediaAtHand, Google, Tjek",
+    "confidenceScore": 11,
+    "expertiseScore": 12
+  },
+  {
+    "finding": "Cloud decreases control over the software.",
+    "statedBy": "Google, Tjek, MediaAtHand",
+    "confidenceScore": 11,
+    "expertiseScore": 12
+  },
+  {
+    "finding": "The goal of cloud is to drive businesses forward.",
+    "statedBy": "Google, ThoughtWorks, MediaAtHand",
+    "confidenceScore": 12,
+    "expertiseScore": 11
+  },
+  {
+    "finding": "Cloud tools automate typical operations tasks.",
+    "statedBy": "Tjek, ThoughtWorks, MediaAtHand",
+    "confidenceScore": 12,
+    "expertiseScore": 11
+  },
+  {
+    "finding": "Cloud tools are automating highly complex operations.",
+    "statedBy": "Tjek, ThoughtWorks, DigitalOcean",
+    "confidenceScore": 12,
+    "expertiseScore": 11
+  },
+  {
+    "finding": "Technical complexity should be handled by cloud vendor.",
+    "statedBy": "MediaAtHand, Google, IBM, DigitalOcean",
+    "confidenceScore": 12,
+    "expertiseScore": 10
+  },
+  {
+    "finding": "Cloud increases cost-efficiency.",
+    "statedBy": "Google, MediaAtHand, Microsoft",
+    "confidenceScore": 9,
+    "expertiseScore": 9
+  },
+  {
+    "finding": "Hiding complexity makes troubleshooting problems more difficult.",
+    "statedBy": "Tjek, ThoughtWorks",
+    "confidenceScore": 9,
+    "expertiseScore": 9
+  },
+  {
+    "finding": "Cloud increases complexity.",
+    "statedBy": "ThoughtWorks, Tjek",
+    "confidenceScore": 9,
+    "expertiseScore": 9
+  },
+  {
+    "finding": "Cloud makes it easier for businesses to react to market needs.",
+    "statedBy": "ThoughtWorks, Microsoft, MediaAtHand",
+    "confidenceScore": 10,
+    "expertiseScore": 8
+  },
+  {
+    "finding": "Unclear pricing schemas are a problem in cloud.",
+    "statedBy": "MediaAtHand, Google",
+    "confidenceScore": 7,
+    "expertiseScore": 7
+  },
+  {
+    "finding": "Developer experience is an important factor when choosing a cloud provider.",
+    "statedBy": "DigitalOcean, Tjek",
+    "confidenceScore": 7,
+    "expertiseScore": 7
+  },
+  {
+    "finding": "Complexity can be handled by providing users with easy-to-use tooling.",
+    "statedBy": "IBM, MediaAtHand, DigitalOcean",
+    "confidenceScore": 8,
+    "expertiseScore": 5
+  },
+  {
+    "finding": "Using open-source software in cloud makes troubleshooting easier.",
+    "statedBy": "Tjek",
+    "confidenceScore": 4,
+    "expertiseScore": 5
+  },
+  {
+    "finding": "Complexity can be addressed by increasing transparency of cloud tools.",
+    "statedBy": "Tjek",
+    "confidenceScore": 4,
+    "expertiseScore": 5
+  },
+  {
+    "finding": "Training should be the goal of cloud providers.",
+    "statedBy": "ThoughtWorks",
+    "confidenceScore": 5,
+    "expertiseScore": 4
+  },
+  {
+    "finding": "Cross-functional teams can deal with complexity better.",
+    "statedBy": "ThoughtWorks",
+    "confidenceScore": 5,
+    "expertiseScore": 4
+  },
+  {
+    "finding": "Companies should be breaking knowledge silos.",
+    "statedBy": "ThoughtWorks",
+    "confidenceScore": 5,
+    "expertiseScore": 4
+  },
+  {
+    "finding": "Cloud complexity is decreasing.",
+    "statedBy": "Microsoft, MediaAtHand",
+    "confidenceScore": 5,
+    "expertiseScore": 4
+  },
+  {
+    "finding": "Cloud vendors should be reliable.",
+    "statedBy": "DigitalOcean",
+    "confidenceScore": 3,
+    "expertiseScore": 2
+  },
+  {
+    "finding": "Developer experience can be evaluated by interviewing engineers.",
+    "statedBy": "DigitalOcean",
+    "confidenceScore": 3,
+    "expertiseScore": 2
+  }
+]
