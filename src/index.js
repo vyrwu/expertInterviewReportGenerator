@@ -1,4 +1,4 @@
-const {normalScores, weighedScores, findings} = require('./data.js')
+const {normalScores, weighedScores, findings,vendorFindings} = require('./data.js')
 const {writeLatexTable} = require('./util')
 
 const fs = require('fs')
@@ -125,11 +125,11 @@ const generateScoredFindings = async (nameOfReport, findings, scores) => {
         const formattedFindings = {
             json: {
                 data: JSON.stringify(sortedFindingsByAverageScore, null, 2),
-                path: `./out/json/${nameOfReport}-sum.json`
+                path: `./out/json/${nameOfReport}-avg.json`
             },
             latex: {
                 data: writeLatexTable(sortedFindingsByAverageScore),
-                path: `./out/latex/${nameOfReport}-sum.tex`
+                path: `./out/latex/${nameOfReport}-avg.tex`
             }
         }
         fs.writeFile(formattedFindings.latex.path, formattedFindings.latex.data, () => console.log(`Report finished: ${formattedFindings.latex.path}`))
@@ -139,6 +139,8 @@ const generateScoredFindings = async (nameOfReport, findings, scores) => {
 
 (async () => {
     console.log('Starting...')
-    generateScoredFindings('normal', findings, normalScores)
-    generateScoredFindings('weighed', findings, weighedScores)
+    generateScoredFindings('complexity-normal', findings, normalScores)
+    generateScoredFindings('complexity-weighed', findings, weighedScores)
+    generateScoredFindings('vendor-normal', vendorFindings, normalScores)
+    generateScoredFindings('vendor-weighed', vendorFindings, weighedScores)
 })()
