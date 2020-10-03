@@ -1,0 +1,74 @@
+[
+  {
+    "finding": "Vendor lock-in is a tradeoff.",
+    "statedBy": "Google, Tjek, ThoughtWorks",
+    "confidenceScore": 13,
+    "expertiseScore": 14
+  },
+  {
+    "finding": "Using cloud vendor offerings helps to deliver business value, rather than imposing limitations.",
+    "statedBy": "ThoughtWorks, Microsoft, MediaAtHand, Google",
+    "confidenceScore": 14,
+    "expertiseScore": 13
+  },
+  {
+    "finding": "Focusing heavely on building cloud agnostic applications is suboptimal.",
+    "statedBy": "ThoughtWorks, Tjek",
+    "confidenceScore": 9,
+    "expertiseScore": 9
+  },
+  {
+    "finding": "Vendor lock-in is a problem.",
+    "statedBy": "Google, Tjek",
+    "confidenceScore": 8,
+    "expertiseScore": 10
+  },
+  {
+    "finding": "Standardization mitigates vendor lock-in.",
+    "statedBy": "ThoughtWorks, Google",
+    "confidenceScore": 9,
+    "expertiseScore": 9
+  },
+  {
+    "finding": "Support for open-source software eliviates vendor lock-in.",
+    "statedBy": "Tjek, Google",
+    "confidenceScore": 8,
+    "expertiseScore": 10
+  },
+  {
+    "finding": "Vendor lock-in is not problamatic.",
+    "statedBy": "MediaAtHand, ThoughtWorks",
+    "confidenceScore": 8,
+    "expertiseScore": 6
+  },
+  {
+    "finding": "Chosing the right provider is a challenge.",
+    "statedBy": "ThoughtWorks, DigitalOcean",
+    "confidenceScore": 8,
+    "expertiseScore": 6
+  },
+  {
+    "finding": "It is beneficial to choose a single cloud provider as long term partner.",
+    "statedBy": "ThoughtWorks, DigitalOcean",
+    "confidenceScore": 8,
+    "expertiseScore": 6
+  },
+  {
+    "finding": "Issues on the side of the provider is not easily identifiable.",
+    "statedBy": "Tjek",
+    "confidenceScore": 4,
+    "expertiseScore": 5
+  },
+  {
+    "finding": "Vendor lock-in does not exists.",
+    "statedBy": "MediaAtHand",
+    "confidenceScore": 3,
+    "expertiseScore": 2
+  },
+  {
+    "finding": "Problems with supporting legacy software are often miscatagorised as vendor lock-in.",
+    "statedBy": "MediaAtHand",
+    "confidenceScore": 3,
+    "expertiseScore": 2
+  }
+]
