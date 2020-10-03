@@ -16,8 +16,8 @@ module.exports.weighedScores = {
 
 module.exports.vendorFindings = [
     {finding: "Vendor lock-in is not problamatic.", statedBy: "MediaAtHand, ThoughtWorks"},
-    {finding: "Focusing heavely on building cloud agnostic applications is suboptimal.", statedBy: "ThoughtWorks, Tjek"},
-    {finding: "Chosing the right provider is a challenge.", statedBy: "ThoughtWorks, DigitalOcean"},
+    {finding: "Focusing heavely on building cloud agnostic applications is sub-optimal.", statedBy: "ThoughtWorks, Tjek"},
+    {finding: "Choosing the right provider is a challenge.", statedBy: "ThoughtWorks, DigitalOcean"},
     {finding: "Vendor lock-in does not exists.", statedBy: "MediaAtHand"},
     {finding: "Vendor lock-in is a problem.", statedBy: "Google, Tjek"},
     {finding: "Issues on the side of the provider is not easily identifiable.", statedBy: "Tjek"},
@@ -26,7 +26,7 @@ module.exports.vendorFindings = [
     {finding: "Vendor lock-in is a tradeoff.", statedBy: "Google, Tjek, ThoughtWorks"},
     {finding: "It is beneficial to choose a single cloud provider as long term partner.", statedBy: "ThoughtWorks, DigitalOcean"},
     {finding: "Using cloud vendor offerings helps to deliver business value, rather than imposing limitations.", statedBy: "ThoughtWorks, Microsoft, MediaAtHand, Google"},
-    {finding: "Problems with supporting legacy software are often miscatagorised as vendor lock-in.", statedBy: "MediaAtHand"},
+    {finding: "Problems with supporting legacy software are often miscatagorized as vendor lock-in.", statedBy: "MediaAtHand"},
 ]
 
 module.exports.findings = [
@@ -34,7 +34,7 @@ module.exports.findings = [
     {finding: "Cloud is a good tool for prototyping.", statedBy: "MediaAtHand, ThoughtWorks, Tjek"},                                
     {finding: "It is easier to operate in cloud vs. on-premise.", statedBy: "MediaAtHand, ThoughtWorks, Tjek, Microsoft"},
     {finding: "It is difficult to choose the right cloud tools.", statedBy: "MediaAtHand, Google, Tjek"},
-    {finding: "Unclear pricing schemas are a problem in cloud.", statedBy: "MediaAtHand, Google"},
+    {finding: "Unclear pricing schemes are a problem in cloud.", statedBy: "MediaAtHand, Google"},
     {finding: "Technical complexity should be handled by cloud vendor.", statedBy: "MediaAtHand, Google, IBM, DigitalOcean"},
     {finding: "Complexity can be handled by out-sourcing parts of the system to cloud.", statedBy: "Google, ThoughtWorks, MediaAtHand, DigitalOcean"},
     {finding: "Cloud decreases control over the software.", statedBy: "Google, Tjek, MediaAtHand"},
