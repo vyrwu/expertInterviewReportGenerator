@@ -1,0 +1,74 @@
+[
+  {
+    "finding": "Vendor lock-in is a tradeoff.",
+    "statedBy": "Google, Tjek, ThoughtWorks",
+    "confidenceScore": 7.909090909090909,
+    "expertiseScore": 9.272727272727273
+  },
+  {
+    "finding": "Focusing heavely on building cloud agnostic applications is sub-optimal.",
+    "statedBy": "ThoughtWorks, Tjek",
+    "confidenceScore": 5.727272727272727,
+    "expertiseScore": 5.727272727272727
+  },
+  {
+    "finding": "Vendor lock-in is a problem.",
+    "statedBy": "Google, Tjek",
+    "confidenceScore": 4.363636363636363,
+    "expertiseScore": 7.09090909090909
+  },
+  {
+    "finding": "Standardization mitigates vendor lock-in.",
+    "statedBy": "ThoughtWorks, Google",
+    "confidenceScore": 5.727272727272727,
+    "expertiseScore": 5.727272727272727
+  },
+  {
+    "finding": "Support for open-source software eliviates vendor lock-in.",
+    "statedBy": "Tjek, Google",
+    "confidenceScore": 4.363636363636363,
+    "expertiseScore": 7.09090909090909
+  },
+  {
+    "finding": "Using cloud vendor offerings helps to deliver business value, rather than imposing limitations.",
+    "statedBy": "ThoughtWorks, Microsoft, MediaAtHand, Google",
+    "confidenceScore": 4.818181818181818,
+    "expertiseScore": 4.301948051948052
+  },
+  {
+    "finding": "Issues on the side of the provider is not easily identifiable.",
+    "statedBy": "Tjek",
+    "confidenceScore": 2.1818181818181817,
+    "expertiseScore": 3.545454545454545
+  },
+  {
+    "finding": "Vendor lock-in is not problamatic.",
+    "statedBy": "MediaAtHand, ThoughtWorks",
+    "confidenceScore": 3.272727272727273,
+    "expertiseScore": 1.8181818181818183
+  },
+  {
+    "finding": "Choosing the right provider is a challenge.",
+    "statedBy": "ThoughtWorks, DigitalOcean",
+    "confidenceScore": 3.272727272727273,
+    "expertiseScore": 1.8181818181818183
+  },
+  {
+    "finding": "It is beneficial to choose a single cloud provider as long term partner.",
+    "statedBy": "ThoughtWorks, DigitalOcean",
+    "confidenceScore": 3.272727272727273,
+    "expertiseScore": 1.8181818181818183
+  },
+  {
+    "finding": "Vendor lock-in does not exists.",
+    "statedBy": "MediaAtHand",
+    "confidenceScore": 0.4545454545454546,
+    "expertiseScore": 0.18181818181818182
+  },
+  {
+    "finding": "Problems with supporting legacy software are often miscatagorized as vendor lock-in.",
+    "statedBy": "MediaAtHand",
+    "confidenceScore": 0.4545454545454546,
+    "expertiseScore": 0.18181818181818182
+  }
+]

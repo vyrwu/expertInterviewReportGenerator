@@ -53,7 +53,7 @@ const useScoredProfiles = scores => {
     return [scoredProfiles, findByDisplayName]
 }
 
-const generateScoredFindings = async (nameOfReport, findings, scores) => {
+const generateScoredFindings = async (nameOfReport, findings, scores, maxPopularity) => {
 
     const [_, findByDisplayName] = useScoredProfiles(scores)
 
@@ -104,43 +104,91 @@ const generateScoredFindings = async (nameOfReport, findings, scores) => {
         fs.writeFile(formattedFindings.json.path, formattedFindings.json.data,() => console.log(`Report finished: ${formattedFindings.json.path}`))
     })()
 
+    // await (async () => {
+    //     const findingsByAverageScore = findings.map(f => {
+    //         const statedBy = f.statedBy.split(', ')
+    //         return {
+    //             ...f,
+    //             confidenceScore: statedBy.reduce(((acc, cur) => {
+    //                 const matchedProfile = findByDisplayName(cur)
+    //                 return acc + matchedProfile.confidenceLevel
+    //             }), 0) / statedBy.length,
+    //             expertiseScore: statedBy.reduce(((acc, cur) => {
+    //                 const matchedProfile = findByDisplayName(cur)
+    //                 return acc + matchedProfile.expertiseLevel
+    //             }), 0) / statedBy.length
+    //         }
+    //     })
+    
+    //     const sortedFindingsByAverageScore = sortBySumDescending(findingsByAverageScore)
+        
+    //     const formattedFindings = {
+    //         json: {
+    //             data: JSON.stringify(sortedFindingsByAverageScore, null, 2),
+    //             path: `./out/json/${nameOfReport}-avg.json`
+    //         },
+    //         latex: {
+    //             data: writeLatexTable(sortedFindingsByAverageScore),
+    //             path: `./out/latex/${nameOfReport}-avg.tex`
+    //         }
+    //     }
+    //     fs.writeFile(formattedFindings.latex.path, formattedFindings.latex.data, () => console.log(`Report finished: ${formattedFindings.latex.path}`))
+    //     fs.writeFile(formattedFindings.json.path, formattedFindings.json.data,() => console.log(`Report finished: ${formattedFindings.json.path}`))
+    // })()
+
     await (async () => {
-        const findingsByAverageScore = findings.map(f => {
+        const findingsByFinalScore = findings.map(f => {
+
             const statedBy = f.statedBy.split(', ')
+            // finalscore = (avg. conf + avg. exp) / (popularity/maxPopularity)*100
+            const sumConfidence = statedBy.reduce(((acc, cur) => {
+                const matchedProfile = findByDisplayName(cur)
+                return acc + matchedProfile.confidenceLevel
+            }), 0)
+            const sumExperitise = statedBy.reduce(((acc, cur) => {
+                const matchedProfile = findByDisplayName(cur)
+                return acc + matchedProfile.expertiseLevel
+            }), 0)
+            const popularityPerc = ((sumConfidence + sumExperitise) / maxPopularity)
+            
+            const avgConfidence = statedBy.reduce(((acc, cur) => {
+                const matchedProfile = findByDisplayName(cur)
+                return acc + matchedProfile.confidenceLevel
+            }), 0) / statedBy.length
+            const avgExpertise = statedBy.reduce(((acc, cur) => {
+                const matchedProfile = findByDisplayName(cur)
+                return acc + matchedProfile.expertiseLevel
+            }), 0) / statedBy.length
+
             return {
                 ...f,
-                confidenceScore: statedBy.reduce(((acc, cur) => {
-                    const matchedProfile = findByDisplayName(cur)
-                    return acc + matchedProfile.confidenceLevel
-                }), 0) / statedBy.length,
-                expertiseScore: statedBy.reduce(((acc, cur) => {
-                    const matchedProfile = findByDisplayName(cur)
-                    return acc + matchedProfile.expertiseLevel
-                }), 0) / statedBy.length
+                confidenceScore: avgConfidence * popularityPerc,
+                expertiseScore: avgExpertise * popularityPerc
             }
         })
-    
-        const sortedFindingsByAverageScore = sortBySumDescending(findingsByAverageScore)
+
+        const sortedFindingsByFinalScore = sortBySumDescending(findingsByFinalScore)
         
         const formattedFindings = {
             json: {
-                data: JSON.stringify(sortedFindingsByAverageScore, null, 2),
-                path: `./out/json/${nameOfReport}-avg.json`
+                data: JSON.stringify(sortedFindingsByFinalScore, null, 2),
+                path: `./out/json/${nameOfReport}-final.json`
             },
             latex: {
-                data: writeLatexTable(sortedFindingsByAverageScore),
-                path: `./out/latex/${nameOfReport}-avg.tex`
+                data: writeLatexTable(sortedFindingsByFinalScore),
+                path: `./out/latex/${nameOfReport}-final.tex`
             }
         }
         fs.writeFile(formattedFindings.latex.path, formattedFindings.latex.data, () => console.log(`Report finished: ${formattedFindings.latex.path}`))
-        fs.writeFile(formattedFindings.json.path, formattedFindings.json.data,() => console.log(`Report finished: ${formattedFindings.json.path}`))
+        fs.writeFile(formattedFindings.json.path, formattedFindings.json.data, () => console.log(`Report finished: ${formattedFindings.json.path}`))
     })()
 }
 
 (async () => {
     console.log('Starting...')
-    generateScoredFindings('complexity-normal', findings, normalScores)
-    generateScoredFindings('complexity-weighed', findings, weighedScores)
-    generateScoredFindings('vendor-normal', vendorFindings, normalScores)
-    generateScoredFindings('vendor-weighed', vendorFindings, weighedScores)
+    // generateScoredFindings('complexity-normal', findings, normalScores, 84)
+    generateScoredFindings('complexity-weighed', findings, weighedScores, 84)
+    // generateScoredFindings('vendor-normal', vendorFindings, normalScores, 77)
+    generateScoredFindings('vendor-weighed', vendorFindings, weighedScores, 77)
 })()
+
