@@ -3,6 +3,8 @@ const {writeLatexTable} = require('./util')
 
 const fs = require('fs')
 
+const maxPopularity = 84
+
 const useScoredProfiles = scores => {
     const scoredProfiles = [
         {
@@ -130,6 +132,38 @@ const generateScoredFindings = async (nameOfReport, findings, scores) => {
             latex: {
                 data: writeLatexTable(sortedFindingsByAverageScore),
                 path: `./out/latex/${nameOfReport}-avg.tex`
+            }
+        }
+        fs.writeFile(formattedFindings.latex.path, formattedFindings.latex.data, () => console.log(`Report finished: ${formattedFindings.latex.path}`))
+        fs.writeFile(formattedFindings.json.path, formattedFindings.json.data,() => console.log(`Report finished: ${formattedFindings.json.path}`))
+    })()
+
+    await (async () => {
+        const findingsByPercentaageScore = findings.map(f => {
+            const statedBy = f.statedBy.split(', ')
+            return {
+                ...f,
+                confidenceScore: statedBy.reduce(((acc, cur) => {
+                    const matchedProfile = findByDisplayName(cur)
+                    return acc + matchedProfile.confidenceLevel
+                }), 0)* 100 / maxPopularity,
+                expertiseScore: statedBy.reduce(((acc, cur) => {
+                    const matchedProfile = findByDisplayName(cur)
+                    return acc + matchedProfile.expertiseLevel
+                }), 0) * 100 / maxPopularity
+            }
+        })
+    
+        const sortedFindingsByPercentaageScore = sortBySumDescending(findingsByPercentaageScore)
+        
+        const formattedFindings = {
+            json: {
+                data: JSON.stringify(sortedFindingsByPercentaageScore, null, 2),
+                path: `./out/json/${nameOfReport}-percent.json`
+            },
+            latex: {
+                data: writeLatexTable(sortedFindingsByPercentaageScore),
+                path: `./out/latex/${nameOfReport}-percent.tex`
             }
         }
         fs.writeFile(formattedFindings.latex.path, formattedFindings.latex.data, () => console.log(`Report finished: ${formattedFindings.latex.path}`))

@@ -1,5 +1,11 @@
 [
   {
+    "finding": "MAX",
+    "statedBy": "Tjek, ThoughtWorks, MediaAtHand, Google, DigitalOcean, Microsoft, IBM",
+    "confidenceScore": 43,
+    "expertiseScore": 41
+  },
+  {
     "finding": "Using public cloud offerings makes complex software more accesible.",
     "statedBy": "Tjek, ThoughtWorks, MediaAtHand, Google, DigitalOcean, Microsoft",
     "confidenceScore": 41,
@@ -102,7 +108,7 @@
     "expertiseScore": 12
   },
   {
-    "finding": "Unclear pricing schemas are a problem in cloud.",
+    "finding": "Unclear pricing schemes are a problem in cloud.",
     "statedBy": "MediaAtHand, Google",
     "confidenceScore": 13,
     "expertiseScore": 15

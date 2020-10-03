@@ -1,6 +1,6 @@
 [
   {
-    "finding": "Focusing heavely on building cloud agnostic applications is suboptimal.",
+    "finding": "Focusing heavely on building cloud agnostic applications is sub-optimal.",
     "statedBy": "ThoughtWorks, Tjek",
     "confidenceScore": 10.5,
     "expertiseScore": 10.5
@@ -42,7 +42,7 @@
     "expertiseScore": 5
   },
   {
-    "finding": "Chosing the right provider is a challenge.",
+    "finding": "Choosing the right provider is a challenge.",
     "statedBy": "ThoughtWorks, DigitalOcean",
     "confidenceScore": 9,
     "expertiseScore": 5
@@ -66,7 +66,7 @@
     "expertiseScore": 2
   },
   {
-    "finding": "Problems with supporting legacy software are often miscatagorised as vendor lock-in.",
+    "finding": "Problems with supporting legacy software are often miscatagorized as vendor lock-in.",
     "statedBy": "MediaAtHand",
     "confidenceScore": 5,
     "expertiseScore": 2

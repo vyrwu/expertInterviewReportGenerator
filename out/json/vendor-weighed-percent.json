@@ -2,73 +2,73 @@
   {
     "finding": "Vendor lock-in is a tradeoff.",
     "statedBy": "Google, Tjek, ThoughtWorks",
-    "confidenceScore": 13,
-    "expertiseScore": 14
+    "confidenceScore": 34.523809523809526,
+    "expertiseScore": 40.476190476190474
   },
   {
     "finding": "Using cloud vendor offerings helps to deliver business value, rather than imposing limitations.",
     "statedBy": "ThoughtWorks, Microsoft, MediaAtHand, Google",
-    "confidenceScore": 14,
-    "expertiseScore": 13
+    "confidenceScore": 33.333333333333336,
+    "expertiseScore": 29.761904761904763
   },
   {
     "finding": "Focusing heavely on building cloud agnostic applications is sub-optimal.",
     "statedBy": "ThoughtWorks, Tjek",
-    "confidenceScore": 9,
-    "expertiseScore": 9
+    "confidenceScore": 25,
+    "expertiseScore": 25
   },
   {
     "finding": "Vendor lock-in is a problem.",
     "statedBy": "Google, Tjek",
-    "confidenceScore": 8,
-    "expertiseScore": 10
+    "confidenceScore": 19.047619047619047,
+    "expertiseScore": 30.952380952380953
   },
   {
     "finding": "Standardization mitigates vendor lock-in.",
     "statedBy": "ThoughtWorks, Google",
-    "confidenceScore": 9,
-    "expertiseScore": 9
+    "confidenceScore": 25,
+    "expertiseScore": 25
   },
   {
     "finding": "Support for open-source software eliviates vendor lock-in.",
     "statedBy": "Tjek, Google",
-    "confidenceScore": 8,
-    "expertiseScore": 10
+    "confidenceScore": 19.047619047619047,
+    "expertiseScore": 30.952380952380953
   },
   {
     "finding": "Vendor lock-in is not problamatic.",
     "statedBy": "MediaAtHand, ThoughtWorks",
-    "confidenceScore": 8,
-    "expertiseScore": 6
+    "confidenceScore": 21.428571428571427,
+    "expertiseScore": 11.904761904761905
   },
   {
     "finding": "Choosing the right provider is a challenge.",
     "statedBy": "ThoughtWorks, DigitalOcean",
-    "confidenceScore": 8,
-    "expertiseScore": 6
+    "confidenceScore": 21.428571428571427,
+    "expertiseScore": 11.904761904761905
   },
   {
     "finding": "It is beneficial to choose a single cloud provider as long term partner.",
     "statedBy": "ThoughtWorks, DigitalOcean",
-    "confidenceScore": 8,
-    "expertiseScore": 6
+    "confidenceScore": 21.428571428571427,
+    "expertiseScore": 11.904761904761905
   },
   {
     "finding": "Issues on the side of the provider is not easily identifiable.",
     "statedBy": "Tjek",
-    "confidenceScore": 4,
-    "expertiseScore": 5
+    "confidenceScore": 9.523809523809524,
+    "expertiseScore": 15.476190476190476
   },
   {
     "finding": "Vendor lock-in does not exists.",
     "statedBy": "MediaAtHand",
-    "confidenceScore": 3,
-    "expertiseScore": 2
+    "confidenceScore": 5.9523809523809526,
+    "expertiseScore": 2.380952380952381
   },
   {
     "finding": "Problems with supporting legacy software are often miscatagorized as vendor lock-in.",
     "statedBy": "MediaAtHand",
-    "confidenceScore": 3,
-    "expertiseScore": 2
+    "confidenceScore": 5.9523809523809526,
+    "expertiseScore": 2.380952380952381
   }
 ]

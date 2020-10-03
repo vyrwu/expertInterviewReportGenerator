@@ -84,7 +84,7 @@
     "expertiseScore": 7.666666666666667
   },
   {
-    "finding": "Unclear pricing schemas are a problem in cloud.",
+    "finding": "Unclear pricing schemes are a problem in cloud.",
     "statedBy": "MediaAtHand, Google",
     "confidenceScore": 6.5,
     "expertiseScore": 7.5
@@ -112,6 +112,12 @@
     "statedBy": "MediaAtHand, ThoughtWorks, Tjek, Microsoft",
     "confidenceScore": 7,
     "expertiseScore": 6.25
+  },
+  {
+    "finding": "MAX",
+    "statedBy": "Tjek, ThoughtWorks, MediaAtHand, Google, DigitalOcean, Microsoft, IBM",
+    "confidenceScore": 6.142857142857143,
+    "expertiseScore": 5.857142857142857
   },
   {
     "finding": "Cloud tools hide complexity from the user.",
